@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+            android:id="@+id/menu1"
+            android:title="완료 못한 일정만 보기">
+
+        </item>
+
+        <item
+            android:id="@+id/menu2"
+            android:title="추가">
+
+        </item>
+
+        <item
+            android:id="@+id/menu3"
+            android:title="삭제">
+
+        </item>
+
+        <item
+            android:id="@+id/menu4"
+            android:title="정렬">
+
+        </item>
+
+    </menu>
