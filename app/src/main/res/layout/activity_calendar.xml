@@ -8,9 +8,10 @@
     <com.applandeo.materialcalendarview.CalendarView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:id="@+id/calendarView"
         app:type="one_day_picker"
         app:eventsEnabled="true"
@@ -23,7 +24,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:textSize="16sp"
         android:text=" 일정을 보려면\n날짜를 클릭해주세요"
         android:id="@+id/tv_click"

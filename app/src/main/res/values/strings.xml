@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyCalendar</string>
+    <string name="app_name">MiniCalendar</string>
     <string name="material_calendar_monday">월</string>
     <string name="material_calendar_tuesday">화</string>
     <string name="material_calendar_wednesday">수</string>
