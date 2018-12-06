@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <com.applandeo.materialcalendarview.CalendarView
@@ -18,7 +18,7 @@
         app:headerColor="#e8e8e8"
         app:headerLabelColor="#000000"
         app:abbreviationsLabelsColor="#000000"
-        app:selectionColor="#b8e2a7"
+        app:selectionColor="@color/colorMy"
         >
     </com.applandeo.materialcalendarview.CalendarView>
     <TextView
