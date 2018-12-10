@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         // Adding Toolbar to the activity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         // Set TabSelectedListener
 //        tabLayout.setupWithViewPager(viewPager);
         buttonPlus = findViewById(R.id.plus_btn);
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override
