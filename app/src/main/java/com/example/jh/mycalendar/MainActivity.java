@@ -6,8 +6,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,15 +19,16 @@ public class MainActivity extends AppCompatActivity {
     public ViewPager viewPager;
 
     Button buttonPlus;
+    Button buttonMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         // Adding Toolbar to the activity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
 
         // Initializing the TabLayout
@@ -43,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         // Set TabSelectedListener
 //        tabLayout.setupWithViewPager(viewPager);
         buttonPlus = findViewById(R.id.plus_btn);
-
+        buttonMenu = findViewById(R.id.menu_btn);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override
@@ -52,9 +57,11 @@ public class MainActivity extends AppCompatActivity {
                 switch (tab.getPosition()) {
                     case 0:
                         buttonPlus.setVisibility(View.VISIBLE);
+                        buttonMenu.setVisibility(View.GONE);
                         break;
                     case 1:
                         buttonPlus.setVisibility(View.GONE);
+                        buttonMenu.setVisibility(View.VISIBLE);
                         break;
                     default:
                         break;
@@ -71,23 +78,16 @@ public class MainActivity extends AppCompatActivity {
                 switch (tab.getPosition()) {
                     case 0:
                         buttonPlus.setVisibility(View.VISIBLE);
+                        buttonMenu.setVisibility(View.GONE);
                     case 1:
                         buttonPlus.setVisibility(View.GONE);
+                        buttonMenu.setVisibility(View.VISIBLE);
                     default:
                 }
             }
         });
 
-//        viewPager.scrollTo();
-//
-//        int position = tabLayout.getSelectedTabPosition();
-//        if (position == 1){
-//
-//            Button buttonPlus = getActivity().findViewById(R.id.plus_btn);
-//            buttonPlus.setVisibility(View.GONE);
-//        }
-//        else{
-//
-//        }
     }
+
+
 }

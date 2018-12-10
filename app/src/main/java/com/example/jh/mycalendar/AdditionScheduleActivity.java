@@ -170,7 +170,7 @@ public class AdditionScheduleActivity extends AppCompatActivity {
                 sqlDB.execSQL("INSERT INTO ToDoList VALUES (null, 0, '" + myear + "', '"+(mmonth+1)+"', '"+mday+"', '" + info.getText().toString() + "','" + x + "');");
                 sqlDB.close();
                 Toast.makeText(getApplicationContext(),"추가되었습니다.",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(AdditionScheduleActivity.this, SchedulseeActivity.class);
+                Intent intent = new Intent(AdditionScheduleActivity.this, ScheduleManagementActivity.class);
                 startActivity(intent);
             }
         });

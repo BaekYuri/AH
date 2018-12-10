@@ -57,5 +57,70 @@ public class SchedulseeActivity extends Activity {
             list.setAdapter(dbAdapter);
         }
     }
+    private void selectbdDB(){
+        db = dbHelper.getWritableDatabase();
+        sql = "SELECT * FROM ToDoList WHERE type = '기념일' ORDER BY year ASC, month ASC, day ASC, _id ASC;";
 
+        cursor = db.rawQuery(sql, null);
+        if(cursor.getCount() > 0){
+            startManagingCursor(cursor);
+            DBAdapter dbAdapter = new DBAdapter(this, cursor);
+            list.setAdapter(dbAdapter);
+        }
+    }
+    private void selectdateDB(){
+        db = dbHelper.getWritableDatabase();
+        sql = "SELECT * FROM ToDoList WHERE type = '약속' ORDER BY year ASC, month ASC, day ASC, _id ASC;";
+
+        cursor = db.rawQuery(sql, null);
+        if(cursor.getCount() > 0){
+            startManagingCursor(cursor);
+            DBAdapter dbAdapter = new DBAdapter(this, cursor);
+            list.setAdapter(dbAdapter);
+        }
+    }
+    private void selectschDB(){
+        db = dbHelper.getWritableDatabase();
+        sql = "SELECT * FROM ToDoList WHERE type ='학교' ORDER BY year ASC, month ASC, day ASC, _id ASC;";
+
+        cursor = db.rawQuery(sql, null);
+        if(cursor.getCount() > 0){
+            startManagingCursor(cursor);
+            DBAdapter dbAdapter = new DBAdapter(this, cursor);
+            list.setAdapter(dbAdapter);
+        }
+    }
+    private void selectbizDB(){
+        db = dbHelper.getWritableDatabase();
+        sql = "SELECT * FROM ToDoList WHERE type ='회사' ORDER BY year ASC, month ASC, day ASC, _id ASC;";
+
+        cursor = db.rawQuery(sql, null);
+        if(cursor.getCount() > 0){
+            startManagingCursor(cursor);
+            DBAdapter dbAdapter = new DBAdapter(this, cursor);
+            list.setAdapter(dbAdapter);
+        }
+    }
+    private void selecttripDB(){
+        db = dbHelper.getWritableDatabase();
+        sql = "SELECT * FROM ToDoList WHERE type ='여행' ORDER BY year ASC, month ASC, day ASC, _id ASC;";
+
+        cursor = db.rawQuery(sql, null);
+        if(cursor.getCount() > 0){
+            startManagingCursor(cursor);
+            DBAdapter dbAdapter = new DBAdapter(this, cursor);
+            list.setAdapter(dbAdapter);
+        }
+    }
+    private void selectetcDB(){
+        db = dbHelper.getWritableDatabase();
+        sql = "SELECT * FROM ToDoList WHERE type ='기타' ORDER BY year ASC, month ASC, day ASC, _id ASC;";
+
+        cursor = db.rawQuery(sql, null);
+        if(cursor.getCount() > 0){
+            startManagingCursor(cursor);
+            DBAdapter dbAdapter = new DBAdapter(this, cursor);
+            list.setAdapter(dbAdapter);
+        }
+    }
 }
